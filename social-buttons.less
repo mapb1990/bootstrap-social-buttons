@@ -1,0 +1,259 @@
+//
+// Bootstrap Social Buttons v1.0.0
+// --------------------------------------------------
+
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+
+// @font-size-base:          14px;
+// @line-height-base:        1.428571429; // 20/14
+// @line-height-computed:    20px;
+// @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @font-family-base:        @font-family-sans-serif;
+
+
+// The colours
+// --------------------------------------------------
+
+// Standard colors
+@btnTextColor:                      #fff;
+@btnBackground:                     #222;
+@btnBackgroundHighlight:            #000;
+@btnFontSize:                       22px;
+
+// Facebook colours from ???
+@btnFacebookBackground:             #3B5998;
+@btnFacebookBackgroundHighlight:    #133783;
+@btnFacebookIcon:                   "\f09a";
+
+// Twitter colours from https://twitter.com/
+@btnTwitterBackground:              #2daddc;
+@btnTwitterBackgroundHighlight:     #0271bf;
+@btnTwitterIcon:                   "\f099";
+
+// Github colours from http://ghbtns.com/
+@btnGithubBackground:               #fafafa;
+@btnGithubBackgroundHighlight:      #ccc;
+@btnGithubIcon:                     "\f09b";
+
+// Pinterest colours from http://pinterest.com/
+@btnPinterestBackground:            #d62229;
+@btnPinterestBackgroundHighlight:   #ab171e;
+@btnPinterestIcon:                  "\f0d2";
+
+// Linkedin colours from http://www.linkedin.com/
+@btnLinkedinBackground:             #73b8db;
+@btnLinkedinBackgroundHighlight:    #4393BB;
+@btnLinkedinIcon:                  "\f0e1";
+
+// Google Plus colours from https://accounts.google.com/ServiceLogin?service=oz&continue=https://plus.google.com/?gpsrc%3Dgplp0%26partnerid%3Dgplp0&hl=en-GB
+@btnGooglePlusBackground:           #dd4b39;
+@btnGooglePlusBackgroundHighlight:  #c53727;
+@btnGooglePlusIcon:                 "\f0d5";
+
+// Instagram colours from http://instagram.com
+@btnInstagramBackground:            #6f97b6;
+@btnInstagramBackgroundHighlight:   #3f729b;
+@btnInstagramIcon:                  "\f16d";
+
+// Instagram colours from http://instagram.com
+@btnDropboxBackground:              #37a3eb;
+@btnDropboxBackgroundHighlight:     #2181cf;
+@btnDropboxIcon:                    "\f16b";
+
+// Bitbucket colours from https://bitbucket.org/dashboard/overview
+@btnBitbucketBackground:            #2D5F9C;
+@btnBitbucketBackgroundHighlight:   #205081;
+@btnBitbucketIcon:                  "\f171";
+
+// Dribbble colours from https://dribbble.com/session/new
+@btnDribbbleBackground:            #ea4c89;
+@btnDribbbleBackgroundHighlight:   #CB396F;
+@btnDribbbleIcon:                  "\f17d";
+
+// Flickr colours from http://www.flickr.com/about
+@btnFlickrBackground:             #F051A5;
+@btnFlickrBackgroundHighlight:    #ff0084;
+@btnFlickrIcon:                   "\f16e";
+
+// Foursquare colours from https://playfoursquare.s3.amazonaws.com/press/foursquare-brandbook.pdf
+@btnFoursquareBackground:             #0cbadf;
+@btnFoursquareBackgroundHighlight:    #0072b1;
+@btnFoursquareIcon:                   "\f180";
+
+// Renren colours from http://a.xnimg.cn/n/apps/login/v6/cssimg/bg.png
+@btnRenrenBackground:             #397CB6;
+@btnRenrenBackgroundHighlight:    #33669A;
+@btnRenrenIcon:                   "\f18b";
+
+// Skype colours from http://issuu.com/bondo/docs/skype_brand_book_-_look
+@btnSkypeBackground:             #70C3E2;
+@btnSkypeBackgroundHighlight:    #00AFF0;
+@btnSkypeIcon:                   "\f17e";
+
+// Stack Overflow colours from http://cdn.sstatic.net/stackexchange/img/sprites.png?v=8
+@btnStackOverflowBackground:             #FD8B08;
+@btnStackOverflowBackgroundHighlight:    #FD7A15;
+@btnStackOverflowIcon:                   "\f16c";
+
+// Stack Exchange colours from http://cdn.sstatic.net/stackexchange/img/sprites.png?v=8
+@btnStackExchangeBackground:             #5184C1;
+@btnStackExchangeBackgroundHighlight:    #185397;
+@btnStackExchangeIcon:                   "\f18d";
+
+// Trello colours from http://cdn.sstatic.net/stackexchange/img/sprites.png?v=8
+@btnTrelloBackground:             #569cc4;
+@btnTrelloBackgroundHighlight:    #27709b;
+@btnTrelloIcon:                   "\f181";
+
+// Tumblr colours from http://assets.tumblr.com/images/background.png?a33896dcf50d40a936025aeb074d8707
+@btnTumblrBackground:             #3A5976;
+@btnTumblrBackgroundHighlight:    #2A4763;
+@btnTumblrIcon:                   "\f173";
+
+// Vimeo colours from http://vimeo.com/about/brand_guidelines
+@btnVimeoBackground:             #1ab7ea;
+@btnVimeoBackgroundHighlight:    #4C8AB0;
+@btnVimeoIcon:                   "\f194";
+
+// VK colours from http://vk.com/images/hat.gif
+@btnVkBackground:             #5A7FA6;
+@btnVkBackgroundHighlight:    #426187;
+@btnVkIcon:                   "\f189";
+
+// Weibo colours from http://img.t.sinajs.cn/t5/style/images/register/form_login.png?id=1370232467958
+@btnWeiboBackground:             #F85959;
+@btnWeiboBackgroundHighlight:    #E64141;
+@btnWeiboIcon:                   "\f18a";
+
+// XING colours from https://www.xing.com/img/s/sprite_zero_r9.png
+@btnXingBackground:             #1F6768;
+@btnXingBackgroundHighlight:    #074C4D;
+@btnXingIcon:                   "\f168";
+
+// Youtube colours from http://www.youtube.com/yt/brand/color.html
+@btnYoutubeBackground:             #CD332D;
+@btnYoutubeBackgroundHighlight:    #6E0610;
+@btnYoutubeIcon:                   "\f167";
+
+// Windows colours from http://www.youtube.com/yt/brand/color.html
+@btnWindowsBackground:             #FAFAFA;
+@btnWindowsBackgroundHighlight:    #CCC;
+@btnWindowsIcon:                   "\f17a";
+
+
+.btn-group-social {
+    margin-bottom: @line-height-computed;
+
+    span.btn-social { 
+        .size(35px, 34px);
+        overflow: hidden;
+        &:before { 
+            text-decoration: inherit;
+            display: inline-block;
+            speak: none;
+            font-family: "FontAwesome";
+            font-weight: normal;
+            font-style: normal;
+            font-size: @btnFontSize;
+            text-decoration: inherit;
+            -webkit-font-smoothing: antialiased;
+            content: "\f118";
+            margin-left: -5px;
+            margin-top: -5px;
+            font-size: @btnFontSize;
+        }
+    }
+
+    .btn-social:first-child { border-right: 1px solid rgba(0, 0, 0, 0.33); }
+    span.btn-social + a.btn-social,
+    a.btn-social + span.btn-social { border-left: 1px solid rgba(255, 255, 255, 0.33); }
+
+    a.btn-social { text-shadow: -1px -1px 0px #444; font-family: @font-family-base; }
+    .btn-social + .btn-social { margin-left: 0; }
+    .btn-social {
+      .button-variant(@btnTextColor; @btnBackground; @btnBackground);
+    }
+}
+
+// 
+// Social buttons
+// --------------------------------------------------
+.btn-social-variant(@network: facebook; @btnBackground: @btnFacebookBackground; @btnBackgroundHighlight: @btnFacebookBackgroundHighlight; @btnIcon: @btnFacebookIcon; @marginLeft: 2px; @marginTop: -3px; @fontSize: 26px;);
+.btn-social-variant(@network: twitter; @btnBackground: @btnTwitterBackground; @btnBackgroundHighlight: @btnTwitterBackgroundHighlight; @btnIcon: @btnTwitterIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: google-plus; @btnBackground: @btnGooglePlusBackground; @btnBackgroundHighlight: @btnGooglePlusBackgroundHighlight; @btnIcon: @btnGooglePlusIcon; @marginLeft: -6px; @marginTop: -5px;);
+.btn-social-variant(@network: google; @btnBackground: @btnGooglePlusBackground; @btnBackgroundHighlight: @btnGooglePlusBackgroundHighlight; @btnIcon: @btnGooglePlusIcon; @marginLeft: -6px; @marginTop: -5px;);
+.btn-social-variant(@network: linkedin; @btnBackground: @btnLinkedinBackground; @btnBackgroundHighlight: @btnLinkedinBackgroundHighlight; @btnIcon: @btnLinkedinIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: github; @btnBackground: @btnGithubBackground; @btnBackgroundHighlight: @btnGithubBackgroundHighlight; @btnIcon: @btnGithubIcon; @marginLeft: -5px; @marginTop: -5px; @text: #000);
+.btn-social-variant(@network: pinterest; @btnBackground: @btnPinterestBackground; @btnBackgroundHighlight: @btnPinterestBackgroundHighlight; @btnIcon: @btnPinterestIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: instagram; @btnBackground: @btnInstagramBackground; @btnBackgroundHighlight: @btnInstagramBackgroundHighlight; @btnIcon: @btnInstagramIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: dropbox; @btnBackground: @btnDropboxBackground; @btnBackgroundHighlight: @btnDropboxBackgroundHighlight; @btnIcon: @btnDropboxIcon; @marginLeft: -6px; @marginTop: -4px;);
+.btn-social-variant(@network: bitbucket; @btnBackground: @btnBitbucketBackground; @btnBackgroundHighlight: @btnBitbucketBackgroundHighlight; @btnIcon: @btnBitbucketIcon; @marginLeft: -4px; @marginTop: -5px;);
+.btn-social-variant(@network: dribbble; @btnBackground: @btnDribbbleBackground; @btnBackgroundHighlight: @btnDribbbleBackgroundHighlight; @btnIcon: @btnDribbbleIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: flickr; @btnBackground: @btnFlickrBackground; @btnBackgroundHighlight: @btnFlickrBackgroundHighlight; @btnIcon: @btnFlickrIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: foursquare; @btnBackground: @btnFoursquareBackground; @btnBackgroundHighlight: @btnFoursquareBackgroundHighlight; @btnIcon: @btnFoursquareIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: renren; @btnBackground: @btnRenrenBackground; @btnBackgroundHighlight: @btnRenrenBackgroundHighlight; @btnIcon: @btnRenrenIcon; @marginLeft: -7px; @marginTop: -5px;);
+.btn-social-variant(@network: skype; @btnBackground: @btnSkypeBackground; @btnBackgroundHighlight: @btnSkypeBackgroundHighlight; @btnIcon: @btnSkypeIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: stack-exchange; @btnBackground: @btnStackExchangeBackground; @btnBackgroundHighlight: @btnStackExchangeBackgroundHighlight; @btnIcon: @btnStackExchangeIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: stack-overflow; @btnBackground: @btnStackOverflowBackground; @btnBackgroundHighlight: @btnStackOverflowBackgroundHighlight; @btnIcon: @btnStackOverflowIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: trello; @btnBackground: @btnTrelloBackground; @btnBackgroundHighlight: @btnTrelloBackgroundHighlight; @btnIcon: @btnTrelloIcon; @marginLeft: -2px; @marginTop: -5px;);
+.btn-social-variant(@network: tumblr; @btnBackground: @btnTumblrBackground; @btnBackgroundHighlight: @btnTumblrBackgroundHighlight; @btnIcon: @btnTumblrIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: vimeo; @btnBackground: @btnVimeoBackground; @btnBackgroundHighlight: @btnVimeoBackgroundHighlight; @btnIcon: @btnVimeoIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: vk; @btnBackground: @btnVkBackground; @btnBackgroundHighlight: @btnVkBackgroundHighlight; @btnIcon: @btnVkIcon; @marginLeft: -8px; @marginTop: -5px;);
+.btn-social-variant(@network: weibo; @btnBackground: @btnWeiboBackground; @btnBackgroundHighlight: @btnWeiboBackgroundHighlight; @btnIcon: @btnWeiboIcon; @marginLeft: -6px; @marginTop: -5px;);
+.btn-social-variant(@network: xing; @btnBackground: @btnXingBackground; @btnBackgroundHighlight: @btnXingBackgroundHighlight; @btnIcon: @btnXingIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: youtube; @btnBackground: @btnYoutubeBackground; @btnBackgroundHighlight: @btnYoutubeBackgroundHighlight; @btnIcon: @btnYoutubeIcon; @marginLeft: -5px; @marginTop: -5px;);
+.btn-social-variant(@network: windows; @btnBackground: @btnWindowsBackground; @btnBackgroundHighlight: @btnWindowsBackgroundHighlight; @btnIcon: @btnWindowsIcon; @marginLeft: -5px; @marginTop: -5px; @text: #000);
+
+.btn-group-github a.btn-social,
+.btn-group-windows a.btn-social { text-shadow: -1px -1px 0 #eee; }
+
+//
+// Mixins
+// --------------------------------------------------
+.btn-social-variant(@network; @btnBackground; @btnBackgroundHighlight; @btnIcon; @text: @btnTextColor; @marginLeft: 0; @marginTop: 0; @fontSize: @btnFontSize) {
+    .btn-group-@{network} {
+        .btn-social { .button-variant(@text; @btnBackground; @btnBackground); }
+        span.btn-social:before { content: @btnIcon; margin-left: @marginLeft; margin-top: @marginTop; font-size: @fontSize; }
+    }
+}
+
+
+// if you 
+// .button-variant(@color; @background; @border) {
+//   color: @color;
+//   background-color: @background;
+//   border-color: @border;
+
+//   &:hover,
+//   &:focus,
+//   &:active,
+//   &.active,
+//   .open .dropdown-toggle& {
+//     color: @color;
+//     background-color: darken(@background, 8%);
+//         border-color: darken(@border, 12%);
+//   }
+//   &:active,
+//   &.active,
+//   .open .dropdown-toggle& {
+//     background-image: none;
+//   }
+//   &.disabled,
+//   &[disabled],
+//   fieldset[disabled] & {
+//     &,
+//     &:hover,
+//     &:focus,
+//     &:active,
+//     &.active {
+//       background-color: @background;
+//           border-color: @border;
+//     }
+//   }
+// }
+
+// .size(@width; @height) {
+//   width: @width;
+//   height: @height;
+// }
